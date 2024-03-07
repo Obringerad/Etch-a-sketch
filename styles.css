@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(16, 1fr); /* 16 columns */
     gap: 1px; /* gap between grid items */
+    
 }
 
 .grid-item {
@@ -9,4 +10,8 @@
     border: 1px solid black;
     padding: 26px;
     text-align: center;
+}
+
+.grid-item.hovered{
+    background-color: red;
 }

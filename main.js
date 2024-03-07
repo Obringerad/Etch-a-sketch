@@ -8,5 +8,8 @@ const gridContainer = document.getElementById('gridContainer');
 for (let i = 0; i < numberOfDivs; i++) {
     const div = document.createElement('div');
     div.classList.add('grid-item');
+    div.addEventListener('mouseover', function() {
+        div.classList.add('hovered');
+    });
     gridContainer.appendChild(div);
 }
