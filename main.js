@@ -1,4 +1,5 @@
 // Number of divs to create
+const divsPerSide ='';
 const numberOfDivs = 256;
 
 // Get the grid container element

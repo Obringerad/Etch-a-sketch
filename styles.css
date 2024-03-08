@@ -1,17 +1,15 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(16, 1fr); /* 16 columns */
-    gap: 1px; /* gap between grid items */
-    
+#gridContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
 }
 
 .grid-item {
     background-color: rgb(245, 245, 245);
     border: 1px solid black;
     padding: 26px;
-    text-align: center;
 }
 
 .grid-item.hovered{
-    background-color: red;
+    background-color: Red;
 }
