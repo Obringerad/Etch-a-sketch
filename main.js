@@ -1,11 +1,25 @@
-// Number of divs to create
-const divsPerSide ='';
-const numberOfDivs = 256;
+var sizeButton=document.getElementById('sizeButton');
+var userInput;
+let gridContainer = document.getElementById('gridContainer');
 
-// Get the grid container element
-const gridContainer = document.getElementById('gridContainer');
+//button fuctions
+    sizeButton.addEventListener('click', function(){
 
-// Creates and appends divs to the grid container
+        userInput = parseInt(window.prompt('How many squares per side? (Up to 100)'));
+        createGrid(userInput);
+        gridContainer.style.setProperty('--divs-per-side', userInput);
+    })
+
+function createGrid(numberOfDivs){
+gridContainer.innerHTML = ''; //clears grid
+
+let totalWidth = 400;
+let squareSize = totalWidth / numberOfDivs;
+
+gridContainer.style.width = totalWidth + 'px';
+gridContainer.style.height = totalWidth + 'px';
+
+// create divs
 for (let i = 0; i < numberOfDivs; i++) {
     const div = document.createElement('div');
     div.classList.add('grid-item');
@@ -14,3 +28,6 @@ for (let i = 0; i < numberOfDivs; i++) {
     });
     gridContainer.appendChild(div);
 }
+}
+
+gridContainer.style.setProperty('--divs-per-side', userInput);
