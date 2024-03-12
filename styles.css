@@ -1,19 +1,22 @@
 #gridContainer{
     display: flex;
     flex-wrap: wrap;
-    width:500px;
-    height: 500px;  
-    border: 1px color(black);
+    width: 700px;;
+    height: 700px;  
+    border: 2px solid black;
+    
 }
 
-#grid-item {
+.grid-item {
+    box-sizing: border-box;
+    flex: 1 1 calc(100% / var(--divs-per-side));
     background-color: rgb(245, 245, 245);
-    padding: 20px;
+    padding: auto;
     width: calc(100% / var(--divs-per-side));
     height: calc(100% / var(--divs-per-side));
 }
 
-#grid-item.hovered{
+.grid-item.hovered{
     background-color: Red;
 }
 
